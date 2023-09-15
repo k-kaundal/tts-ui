@@ -6,7 +6,9 @@ module.exports = {
     ],
     plugins: [
       '@babel/plugin-transform-runtime',
-      '@babel/plugin-proposal-class-properties',
+      '@babel/plugin-transform-class-properties',
       '@babel/plugin-proposal-object-rest-spread',
+      "@babel/plugin-transform-optional-chaining",
+      "@babel/plugin-transform-nullish-coalescing-operator"
     ],
   };

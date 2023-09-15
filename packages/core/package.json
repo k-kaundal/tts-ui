@@ -1,15 +1,18 @@
 {
   "name": "@kaundal/core",
-"publishConfig": {
-  "access": "public"
-},
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
-"types": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir dist --extensions '.ts,.tsx' --ignore '**/*.test.tsx','**/*.stories.tsx'",
+    "start": "webpack serve --mode development",
+    "build:js": "babel src --out-dir dist --extensions '.ts,.tsx' --ignore '**/*.test.tsx','**/*.stories.tsx'",
+  "build:types": "tsc --emitDeclarationOnly",
+  "build": "npm run build:js && npm run build:types",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -24,15 +27,19 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.22.15",
     "@babel/core": "^7.22.19",
     "@babel/preset-env": "^7.22.15",
     "@babel/preset-react": "^7.22.15",
-    "@storybook/addon-essentials": "^7.4.1",
+    "@babel/preset-typescript": "^7.22.15",
+    "@storybook/addon-essentials": "^7.4.2",
     "@storybook/addon-interactions": "^7.4.1",
     "@storybook/addon-links": "^7.4.1",
+    "@storybook/addon-mdx-gfm": "^7.4.1",
     "@storybook/addon-onboarding": "^1.0.8",
     "@storybook/blocks": "^7.4.1",
-    "@storybook/react": "^7.4.1",
+    "@storybook/builder-webpack5": "^7.4.2",
+    "@storybook/react": "^7.4.2",
     "@storybook/react-webpack5": "^7.4.1",
     "@storybook/testing-library": "^0.2.0",
     "@testing-library/jest-dom": "^6.1.3",

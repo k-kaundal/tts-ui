@@ -1,3 +1,5 @@
 node_modules/
 *.log
 packages/core/node_modules/
+packages/core/stories/
+packages/core/storybook-static/

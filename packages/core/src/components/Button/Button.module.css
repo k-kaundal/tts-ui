@@ -1,0 +1,75 @@
+.button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+}
+
+/* Variants */
+.contained {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.outlined {
+  border: 1px solid #007bff;
+  background-color: transparent;
+  color: #007bff;
+}
+
+.text {
+  border: none;
+  background-color: transparent;
+  color: #007bff;
+}
+
+/* Sizes */
+.small {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+.medium {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.large {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+}
+
+/* Disabled */
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.animated {
+  transition: transform 0.2s, background-color 0.2s, color 0.2s;
+}
+
+.animated.contained:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.animated.outlined:hover {
+  background-color: #e6f0ff;
+  color: #0056b3;
+  border-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.animated.text:hover {
+  color: #0056b3;
+  transform: scale(1.05);
+}
+
+.animated:active {
+  transform: scale(0.95);
+}
